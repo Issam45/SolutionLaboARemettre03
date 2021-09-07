@@ -1,6 +1,6 @@
 // But : Écrire un prog qui demande à l'utilisateur de rentrer trois entiers et indique si nb3 est compris entre nb1 et nb2 ou nb3 est compris entre nb3 et  nb2
 // Auteur :	Issam Abdelkrim
-// Date : 2021-09-03
+// Date : 2021-09-07
 
 #include <iostream>
 using namespace std;
