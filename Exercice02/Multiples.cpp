@@ -20,7 +20,7 @@ int main()
    // Demander à l'utilisateur de rentrer un nombre entier
    cout << "Rentrer un nombre entier: ";
 
-   cin >> nb1; // Stocker le nombre dans une variable
+   cin >> nb1; // Stocker le nombre dans une variable.
 
    cout << endl;
 
