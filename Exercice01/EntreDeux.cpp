@@ -7,7 +7,8 @@ using namespace std;
 
 int main()
 {
-   int nb1;
+   //Initialiser les variables à utiliser
+   int nb1; 
    int nb2;
    int nb3;
 
