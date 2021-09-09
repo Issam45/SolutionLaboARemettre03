@@ -11,8 +11,8 @@ int main()
 {
    int nbKm; // Initaliser une variable pour stocker le nmb de km parcouru
    int nbJours; // Initialiser une variable pour stocker le nmb de jours de locations
-   int coutParJours = 45; // Variable initialisée à 45, qui défini le cout par jours de la location
-   int kmOffert = 250; // Variable initialisée à 250 qui signifie le nmb de km offert par jours de location
+   const int COUTPARJOURS = 45; // Variable initialisée à 45, qui défini le cout par jours de la location
+   const int KMOFFERT = 250; // Variable initialisée à 250 qui signifie le nmb de km offert par jours de location
    float coutLocations; // Initialiser une variable qui vas permettre de stocker la valeur de la location
    int kmSurplus; // Initialiser une variable qui va permettre de stocker la valeur du km en surplus à l'aide d'un calcul
    float coutKmSurplus; // Initialiser une variable qui va permettre de stocker le cout en cas de km en surplus
@@ -46,9 +46,9 @@ int main()
    {
 
       
-      if (nbKm <= nbJours * kmOffert && nbJours >= 0 && nbKm >= 0)
+      if (nbKm <= nbJours * KMOFFERT && nbJours >= 0 && nbKm >= 0)
       {
-         coutLocations = nbJours * coutParJours; // Calcule du cout de la location, nmb de jours louée multiplier par le cout par jours.
+         coutLocations = nbJours * COUTPARJOURS; // Calcule du cout de la location, nmb de jours louée multiplier par le cout par jours.
 
          coutEssence = (7.6 * nbKm / 100) * 1.35; // Calculer le cout de l'essence --> 7.6 litres multiplier par le nmb de km parcouru diviser par 100km puisqu'on moyenne sa gaspille 7,6litrre/100km
 
@@ -81,13 +81,13 @@ int main()
          
       }
 
-      else if (nbKm >= nbJours * kmOffert && nbJours >= 0 && nbKm >= 0)
+      else if (nbKm >= nbJours * KMOFFERT && nbJours >= 0 && nbKm >= 0)
       {
-         kmSurplus = nbKm - (nbJours * kmOffert); // Calcule du km en surplus --> on soustrait le nbKm effectué par le total de km gratuit (nbJours * kmOffert)
+         kmSurplus = nbKm - (nbJours * KMOFFERT); // Calcule du km en surplus --> on soustrait le nbKm effectué par le total de km gratuit (nbJours * kmOffert)
 
          coutKmSurplus = kmSurplus * 0.05; // Calcule du cout des km en surplus en multipliant par 0.05 le km en surplus
 
-         coutLocations = nbJours * coutParJours; // Calcule du cout de la location, nmb de jours louée multiplier par le cout par jours.
+         coutLocations = nbJours * COUTPARJOURS; // Calcule du cout de la location, nmb de jours louée multiplier par le cout par jours.
 
          coutEssence = (7.6 * nbKm / 100) * 1.35; // Calculer le cout de l'essence --> 7.6 litres multiplier par le nmb de km parcouru diviser par 100km puisqu'on moyenne sa gaspille 7,6litrre/100km 
 
